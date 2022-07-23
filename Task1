@@ -1,0 +1,29 @@
+HTTP 1.1:
+    ->The header of HTTP 1.1 would be encapsulated into the HEADERS frame, the response body would be encapsulated into the DATA frame.
+    ->HTTP 1.1 introduces pipelining the persistent connection with pipelining improves the performance over stop-and-wait, this optimization strategy has the bottleneck, which would cause Head of Line (HOL) Blocking. 
+      Head of Line (HOL) Blocking means if the head of the packet cannot be passed by the destination port when it arrives at the destination, it will cause other packets behind to be blocked.
+    ->HTTP 1.1 requires large amount of data for sending multiple Requests
+    ->HTTP 1.1 uses resource lining to send the client objects that they might need before the client asks for them.
+    ->The server put all the resources together and the client cannot separate or decline to receive them if it doesn’t need them. 
+    ->If putting too many objects within an HTML file, then the HTML file will be very large, which decreases the connection speed.
+
+HTTP 2.0:
+    ->HTTP 2.0 transfer binary format, this would be much more helpful for maintaining the robustness.
+    ->HTTP 2.0 introduces multiplexing and tags each frame. Multiplexing allows the client to construct the multiple streams in parallel, these streams share a single TCP connection. 
+    ->HTTP 2.0 compresses the request in the header, & this process is known as Header Compression.
+    ->HTTP 2.0 has Sever Push,  Since HTTP 2.0 enables sending concurrent responses to a client’s get request.
+    ->The server can send other objects separately along with the requested HTML file.
+    ->By this way, the client can choose to cache them or decline them.
+
+Object:
+    ->A JavaScript object is a collection of named values having state and behavior (properties and method)
+    ->Objects are variables too. But objects can contain many values.
+
+Object properties:
+    ->Properties are the values associated with a JavaScript object
+    ->The object properties can be different primitive values, other objects and functions.
+    ->Properties can usually be changed, added, and deleted, but some are read only.
+
+Object methods:
+    ->Methods are actions that can be performed on objects
+    ->An object method is an object property containing a function definition
